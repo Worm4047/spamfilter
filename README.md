@@ -62,7 +62,7 @@ The purpose of tuning is to find best sets of parameters for particular dataset.
 I apply GridSearchCV to tune the following parameters
 
 	|Parameter          	Settings for investigation
-	|min_samples_split	 	[1-60]                    
+	|min_samples_split	 	[1-59]                    
 	|random_state	     	[1-50]                    
 
 

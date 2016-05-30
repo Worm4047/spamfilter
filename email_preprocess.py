@@ -7,12 +7,10 @@ from sklearn import cross_validation
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_selection import SelectPercentile, f_classif
 
-
-
-def preprocess(words_file = "../tools/word_data.pkl", authors_file="../tools/email_authors.pkl"):
+def preprocess(words_file = "email_words.pkl", category_file="email_category.pkl"):
     """
-        this function takes a pre-made list of email texts (by default word_data.pkl)
-        and the corresponding authors (by default email_authors.pkl) and performs
+        this function takes a pre-made list of email texts (by default email_words.pkl)
+        and the corresponding category (by default email_category.pkl) and performs
         a number of preprocessing steps:
             -- splits into training/testing sets (10% testing)
             -- vectorizes into tfidf matrix
@@ -26,10 +24,10 @@ def preprocess(words_file = "../tools/word_data.pkl", authors_file="../tools/ema
     ### the words (features) and authors (labels), already largely preprocessed
     ### this preprocessing will be repeated in the text learning mini-project
     word_data = pickle.load( open(words_file, "r"))
-    authors = pickle.load( open(authors_file, "r") )
+    category = pickle.load( open(category_file, "r") )
 
     ### test_size is the percentage of events assigned to the test set (remainder go into training)
-    features_train, features_test, labels_train, labels_test = cross_validation.train_test_split(word_data, authors, test_size=0.1, random_state=42)
+    features_train, features_test, labels_train, labels_test = cross_validation.train_test_split(word_data,category, test_size=0.3, random_state=42)
 
 
 
@@ -49,8 +47,8 @@ def preprocess(words_file = "../tools/word_data.pkl", authors_file="../tools/ema
     features_test_transformed  = selector.transform(features_test_transformed).toarray()
 
     ### info on the data
-    print "no. of Chris training emails:", sum(labels_train)
-    print "no. of Sara training emails:", len(labels_train)-sum(labels_train)
+    print "no. of Spam training emails:", sum(labels_train)
+    print "no. of Non Spam training emails:", len(labels_train)-sum(labels_train)
 
 
     return features_train_transformed, features_test_transformed, labels_train, labels_test

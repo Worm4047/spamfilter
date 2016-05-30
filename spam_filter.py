@@ -14,19 +14,21 @@ features_train = features_train[:len(features_train)]
 labels_train = labels_train[:len(labels_train)]
 
 ###NAIVE BAYES######
-"""Uncomment to try
+
 from sklearn.naive_bayes import GaussianNB
 clf = GaussianNB()
 
-"""
+
 
 ###SVM #####
 """Uncomment to try
 from sklearn.svm import SVC
 clf = SVC()
 """
-"""
+
+
 ###DECISION TREE ###
+"""Uncomment to try
 from sklearn import tree
 clf = tree.DecisionTreeClassifier()
 """

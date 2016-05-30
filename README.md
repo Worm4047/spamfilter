@@ -3,6 +3,7 @@
 ##1. Dataset and goal of project
 
 ####Goal ####
+
 The main purpose of project is develop the machine learning algorithm to detect spam Emails from dataset.
 The "spam" concept is diverse: advertisements for products/web
         sites, make money fast schemes, chain letters, pornography...

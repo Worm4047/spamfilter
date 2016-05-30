@@ -23,7 +23,6 @@ Spambase dataset that has been divided into email contents(email_words.pkl) and 
 	All you have to do is set your email content in one file and name it as - email_words.pkl
 	set your email category(spam/not spam) using binary number to signify each in file - email_category.pkl
 	and you are good to go.
-
 	Note : To install required module paste the following commands into terminal - pip install -r requirements.txt
 
 ####Example of current data 

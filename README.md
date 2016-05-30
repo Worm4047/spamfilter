@@ -15,22 +15,26 @@ The "spam" concept is diverse: advertisements for products/web
 	indicators or get a very wide collection of non-spam to 
 	generate a general purpose spam filter.
 
-####Dataset used ####
+####Dataset used 
 Spambase dataset that has been divided into email contents(email_words.pkl) and category of email(email_category.pkl) dataset. 
 
-####Steps to use ####
+####Steps to use
 	All you have to do is set your email content in one file and name it as - email_words.pkl
 	set your email category(spam/not spam) using binary number to signify each in file - email_category.pkl
 	and you are good to go.
 
-####Example of current data #####	
+	Note : To install required module paste the following commands into terminal - pip install -r requirements.txt
+
+####Example of current data 
 There's example of one email_words.pkl: 
 
 "aS' sbaile2 nonprivilegedpst 1 txu energi trade compani 2 bp capit energi fund lp may be subject to mutual termin 2 nobl gas market inc 3 puget sound energi inc 4 virginia power energi market inc 5 t boon picken may be subject to mutual termin 5 neumin product co 6 sodra skogsagarna ek for probabl an ectric counterparti 6 texaco natur gas inc may be book incorrect for texaco inc financi trade 7 ace capit re oversea ltd 8 nevada power compani 9 prior energi corpor 10 select energi inc origin messag from tweed sheila sent thursday januari 31 2002 310 pm to   subject pleas send me the name of the 10 counterparti that we are evalu thank' "
 
 email_category contains whether a particular email is spam or not 
-aI0 = spam
-aI1 = not a spam
+
+	aI0 = spam
+
+	aI1 = not a spam
 
 ##3. Picking an algorithm
 I tried the Naive Bayes, SVM and Decision Trees algorithms. 
@@ -67,4 +71,4 @@ but i got even better performance with naive bayes so i used default settings  .
 
 
 ####Outcome
-The spamfilter filters emails with an accuracy of 96.8% which quite a significant number granted the type of data that was available for testing and training.
+The spamfilter filters emails with an accuracy of 97.2% which quite a significant number granted the type of data that was available for testing and training.

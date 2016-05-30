@@ -2,7 +2,6 @@
 
 import pickle
 import numpy
-
 from sklearn import cross_validation
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_selection import SelectPercentile, f_classif

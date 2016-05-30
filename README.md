@@ -71,4 +71,5 @@ but i got even better performance with naive bayes so i used default settings  .
 
 
 ####Outcome
-The spamfilter filters emails with an accuracy of 97.2% which quite a significant number granted the type of data that was available for testing and training.
+The spamfilter filters emails with an accuracy of 97.2% which quite a significant number granted the type of data 
+ that was available for testing and training.

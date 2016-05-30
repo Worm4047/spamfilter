@@ -20,8 +20,7 @@ def preprocess(words_file = "email_words.pkl", category_file="email_category.pkl
             -- training/testing labels
     """
 
-    ### the words (features) and authors (labels), already largely preprocessed
-    ### this preprocessing will be repeated in the text learning mini-project
+
     word_data = pickle.load( open(words_file, "r"))
     category = pickle.load( open(category_file, "r") )
 
